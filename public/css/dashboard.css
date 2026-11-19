@@ -1,0 +1,614 @@
+/*==========================
+WRAPPER
+==========================*/
+
+.wrapper{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/*==========================
+SIDEBAR
+==========================*/
+
+.sidebar{
+
+    width:270px;
+
+    background:#111827;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+/*==========================
+LOGO
+==========================*/
+
+.logo{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.logo img{
+
+    width:90px;
+
+    margin-bottom:15px;
+
+}
+
+.logo h2{
+
+    color:white;
+
+    font-size:28px;
+
+}
+
+/*==========================
+MENU
+==========================*/
+
+.menu{
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.menu li{
+
+    list-style:none;
+
+}
+
+.menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+    padding:18px 25px;
+
+    transition:.3s;
+
+    text-decoration:none;
+
+}
+
+.menu a:hover{
+
+    background:#C1121F;
+
+}
+
+.menu i{
+
+    width:25px;
+
+    font-size:20px;
+
+}
+
+/*==========================
+LOGOUT
+==========================*/
+
+.logout{
+
+    padding:25px;
+
+}
+
+.logout a{
+
+    display:flex;
+
+    gap:15px;
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+.logout a:hover{
+
+    color:#C1121F;
+
+}
+
+/*==========================
+MAIN
+==========================*/
+
+.main{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+/*==================================
+NAVBAR
+==================================*/
+
+.navbar{
+
+    height:80px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+
+}
+
+/* Left */
+
+.navbar-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.menu-btn{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    background:#F3F4F6;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+}
+
+.menu-btn:hover{
+
+    background:#C1121F;
+
+    color:white;
+
+}
+
+/* Search */
+
+.search-box{
+
+    width:320px;
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+.search-box i{
+
+    width:50px;
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:14px;
+
+}
+
+/* Right */
+
+.navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+/* Notification */
+
+.notification{
+
+    position:relative;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+}
+
+.notification span{
+
+    position:absolute;
+
+    top:-8px;
+
+    right:-10px;
+
+    background:red;
+
+    color:white;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    font-size:11px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Profile */
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile img{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+}
+
+.profile h6{
+
+    margin:0;
+
+}
+
+.profile small{
+
+    color:#888;
+
+}
+
+
+/*=========================
+CONTENT
+=========================*/
+
+.content{
+
+    padding:30px;
+
+    background:#F8FAFC;
+
+    flex:1;
+
+}
+
+/*=========================
+TITLE
+=========================*/
+
+.page-title{
+
+    margin-bottom:30px;
+
+}
+
+.page-title h2{
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.page-title p{
+
+    color:#777;
+
+}
+
+/*=========================
+CARDS
+=========================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card-box{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:30px;
+
+}
+
+.red{
+
+    background:#C1121F;
+
+}
+
+.blue{
+
+    background:#2563EB;
+
+}
+
+.green{
+
+    background:#22C55E;
+
+}
+
+.orange{
+
+    background:#F59E0B;
+
+}
+
+.card-box h3{
+
+    margin:0;
+
+    font-size:30px;
+
+}
+
+.card-box p{
+
+    margin-top:5px;
+
+    color:#666;
+
+}
+
+/*=========================
+TABLE
+=========================*/
+
+.table-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.table-card h3{
+
+    margin-bottom:20px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#111827;
+
+    color:white;
+
+    padding:15px;
+
+}
+
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.success{
+
+    background:#22C55E;
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:30px;
+
+}
+
+.warning{
+
+    background:#F59E0B;
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:30px;
+
+}
+
+.danger{
+
+    background:#EF4444;
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:30px;
+
+}
+
+
+/*==================================
+FOOTER
+==================================*/
+
+.footer{
+
+    height:60px;
+
+    background:white;
+
+    border-top:1px solid #E5E7EB;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+/* الكود المسؤول عن تثبيت اللون الأحمر للزر النشط حالياً */
+.menu a.active {
+    background: #C1121F !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+/* أزرار العمليات داخل الجدول */
+button.warning {
+    background-color: #FBBF24 !important;
+    color: white !important;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button.warning:hover {
+    background-color: #D97706 !important;
+}
+
+button.danger {
+    background-color: #EF4444 !important;
+    color: white !important;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button.danger:hover {
+    background-color: #DC2626 !important;
+}

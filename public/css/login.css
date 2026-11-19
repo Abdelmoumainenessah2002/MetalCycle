@@ -1,0 +1,374 @@
+:root {
+    --primary-red: #da121a; 
+    --dark-left-bg: #0d0d0d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* إعادة ضبط كاملة لجسم الصفحة لمنع التمدد المفرط */
+body {
+    background-color: #1a1a1a !important; 
+    min-height: 100vh !important;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20px !important;
+    overflow: hidden !important; /* يمنع ظهور شريط التمرير الجانبي */
+}
+
+/* الحاوية الأساسية (الكرت) - تم ضبط أبعادها بدقة لـ "تجميع" المكونات */
+.login-page {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 1060px !important;
+    height: 660px !important; /* الارتفاع المثالي لظهور الإحصائيات الفوتر مباشرة */
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6) !important;
+    position: relative !important;
+    margin: auto !important;
+}
+
+/* --- LEFT SIDE (الجانب الأسود) --- */
+.login-left {
+    flex: 1.15 !important;
+    position: relative !important;
+    background-color: var(--dark-left-bg) !important;
+    color: #ffffff !important;
+    padding: 35px 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important; 
+}
+
+.login-left .overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('/images/warehouse-bg.jpg'); 
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 0.12 !important; 
+    z-index: 1 !important;
+}
+
+/* تعديل إحداثيات المثلث الأحمر العلوي ليكون في الزاوية تماماً دون تداخل مع النصوص */
+.login-left::after {
+    content: '' !important;
+    position: absolute !important;
+    top: -250px !important;
+    right: -140px !important;
+    width: 380px !important;
+    height: 480px !important;
+    background-color: var(--primary-red) !important;
+    transform: rotate(28deg) !important;
+    z-index: 2 !important;
+}
+
+/* المثلث الأحمر السفلي */
+.login-left::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -90px !important;
+    left: -90px !important;
+    width: 90px !important;
+    height: 180px !important;
+    background-color: var(--primary-red) !important;
+    transform: rotate(45deg) !important;
+    z-index: 2 !important;
+}
+
+.left-content {
+    position: relative !important;
+    z-index: 3 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important; /* توزيع تلقائي وعادل للمكونات */
+}
+
+/* تنسيق النصوص والشعار للجانب الأيسر */
+.left-content .logo {
+    color: wheat !important;
+    font-size: 4rem !important;
+    margin-bottom: 5px !important;
+    display: block !important;
+    text-align: center !important;
+}
+
+.login-left h1 {
+    font-size: 2.1rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    text-align: center !important;
+    margin-bottom: 2px !important;
+}
+
+.login-left h3 {
+    font-size: 0.9rem !important;
+    color: var(--primary-red) !important;
+    letter-spacing: 2px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+}
+
+.login-left .red-line {
+    display: none !important; /* إلغاء الخط تحت العنوان ليطابق الصورة تماماً */
+}
+
+.login-left .description {
+    color: #cccccc !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    padding: 0 10px !important;
+}
+
+/* FEATURES (المربعات الأربعة المنظمة عرضياً) */
+.features {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
+    margin-bottom: auto !important; 
+}
+
+.feature {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 15px 5px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+}
+
+.feature i {
+    color: var(--primary-red) !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+.feature h4 {
+    font-size: 0.8rem !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    margin-bottom: 3px !important;
+}
+
+.feature span {
+    font-size: 0.7rem !important;
+    color: #888888 !important;
+}
+
+/* STATS (شريط الإحصائيات السفلي ليظهر بدقة ووضوح) */
+.stats {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding-top: 15px !important;
+}
+
+.stats div {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.stats i {
+    color: var(--primary-red) !important;
+    font-size: 1.1rem !important;
+}
+
+.stats strong {
+    color: var(--primary-red) !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+
+.stats span {
+    color: #888888 !important;
+    font-size: 0.7rem !important;
+}
+
+
+/* --- RIGHT SIDE (الجانب الأبيض) --- */
+.login-right {
+    flex: 0.85 !important;
+    padding: 40px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #ffffff !important;
+}
+
+.login-card {
+    width: 100% !important;
+    max-width: 350px !important;
+}
+
+/* الدائرة الحمراء للأيقونة الترحيبية فوق كلمة Bienvenue */
+.login-icon {
+    width: 70px !important;
+    height: 70px !important;
+    background-color: var(--primary-red) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto 15px !important;
+}
+
+.login-icon i {
+    color: #ffffff !important;
+    font-size: 1.8rem !important;
+}
+
+.login-card h2 {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+}
+
+.login-card .subtitle {
+    color: #555555 !important;
+    font-size: 0.85rem !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+}
+
+.login-card .title-line {
+    width: 40px !important;
+    height: 3px !important;
+    background-color: var(--primary-red) !important;
+    margin: 0 auto 25px !important;
+}
+
+/* الحقول INPUTS */
+.form-group {
+    margin-bottom: 15px !important;
+}
+
+.form-group label {
+    display: block !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 6px !important;
+    color: #222222 !important;
+}
+
+.input-box {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.input-box i:not(.toggle-password) {
+    position: absolute !important;
+    left: 12px !important;
+    color: #555555 !important;
+}
+
+.input-box input {
+    width: 100% !important;
+    padding: 11px 12px 11px 40px !important; 
+    font-size: 0.85rem !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 8px !important;
+    outline: none !important;
+    background-color: #ffffff !important;
+}
+
+.input-box .toggle-password {
+    position: absolute !important;
+    right: 12px !important;
+    color: #000000 !important;
+    cursor: pointer !important;
+}
+
+/* الخيارات السفلى لالفورم */
+.login-options {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 25px !important;
+    font-size: 0.8rem !important;
+}
+
+.login-options label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    cursor: pointer !important;
+    color: #333333 !important;
+}
+
+.login-options input {
+    accent-color: var(--primary-red) !important;
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.login-options a {
+    color: var(--primary-red) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+/* زر تسجيل الدخول الأحمر العريض */
+.login-btn {
+    width: 100% !important;
+    padding: 12px !important;
+    background-color: var(--primary-red) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 0.9rem !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+/* الفوتر الخارجي للحقوق السفلي */
+.main-footer {
+    text-align: center !important;
+    padding: 10px 0 !important;
+    font-size: 0.75rem !important;
+    color: #888888 !important;
+    margin-top: 10px !important;
+    width: 100% !important;
+}
+
+/* التوافق التام مع الأجهزة والشاشات المتنوعة */
+@media (max-width: 992px) {
+    .login-page {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .stats {
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+    .login-left::after, .login-left::before {
+        display: none !important;
+    }
+}
